@@ -28,7 +28,7 @@ public class SausResource {
     }
 
     @GetMapping("/saus/{id}")
-    public ResponseEntity<Saus> getById(Integer id){
+    public ResponseEntity<Saus> getById(@PathVariable Integer id){
         Saus saus = sausService.getById(id);
         return new ResponseEntity<>(saus, HttpStatus.OK);
     }
